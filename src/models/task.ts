@@ -1,9 +1,9 @@
 import mongoose, { Document } from "mongoose";
 
-interface Task {
+export interface Task {
   title: string;
   description: string;
-  duedate: Date;
+  duedate: string;
   isCompleted: boolean;
 }
 
@@ -23,7 +23,7 @@ const taskSchema = new mongoose.Schema<TaskDocument>(
       type: String,
     },
     duedate: {
-      type: Date,
+      type: String,
       required: true,
     },
     isCompleted: {
